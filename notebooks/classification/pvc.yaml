@@ -1,0 +1,12 @@
+apiVersion: v1  
+kind: PersistentVolumeClaim  
+metadata:  
+  name: kind-local-pvc
+  namespace: kubeflow  
+spec:  
+  accessModes:  
+    - ReadWriteOnce  
+  resources:  
+    requests:  
+      storage: 10Gi  # Size of the PVC (should match PV)  
+  storageClassName: manual  # Must match the storageClassName of the PV
