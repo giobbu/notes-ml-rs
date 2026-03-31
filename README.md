@@ -19,6 +19,16 @@ Otherwise, for one-shot deployment (from within `notebooks/gps-analytics`):
 ./deploy_docker_spark_jupyter.sh
 ```
 
+accessing PySpark inside the container:
+```bash
+docker exec -i -t <name-container> /usr/local/spark/bin/pyspark
+```
+
+access Spark UI:
+```bash
+http://localhost:4040
+```
+
 ## Setup kubeflow pipeline on kind cluster
 You can find a detailed step-by-step guide in:
 
