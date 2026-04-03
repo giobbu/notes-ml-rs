@@ -16,7 +16,7 @@ You can find a detailed step-by-step guide in:
 
 Otherwise, for one-shot deployment (from within `notebooks/gps-analytics`):
 ```bash
-./deploy_docker_spark_jupyter.sh
+./deploy_docker_spark_jupyter.sh "$PWD"
 ```
 
 accessing PySpark inside the container:
