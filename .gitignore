@@ -3,6 +3,13 @@ geo_point*
 geofences*
 gps-analytics/gps
 
+# pyspark
+.part*
+part*
+_SUCCESS*
+._SUCCESS*
+*.parquet
+
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
