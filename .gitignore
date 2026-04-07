@@ -3,6 +3,8 @@ geo_point*
 geofences*
 gps-analytics/gps
 
+model_registry*
+
 # pyspark
 .part*
 part*
