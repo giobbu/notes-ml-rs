@@ -6,6 +6,7 @@ gps-analytics/gps
 notebooks/image-classification/model_registry/v*/*.json
 notebooks/image-classification/model_registry/v*/*.pkl
 notebooks/image-classification/feature_store/v*/*.csv
+notebooks/image-classification/feature_store/v*/*.json
 
 # pyspark
 .part*
