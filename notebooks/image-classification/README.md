@@ -46,6 +46,7 @@ kubectl get pods -n kubeflow
 Wait until all pods show `STATUS = Running`.
 
 ### 5. Configure persistent storage (PV & PVC)
+
 ```bash
 kubectl apply -f pv.yaml
 kubectl apply -f pvc.yaml
@@ -53,8 +54,15 @@ kubectl apply -f pvc.yaml
 kubectl get pvc -n kubeflow
 ```
 
-### 6. Access the services (port-forwarding) 
-#### Kubeflow UI
+### 6. Install model registry service
+
+```bash
+kubectl apply -k "https://github.com/alexcreasy/model-registry/manifests/kustomize/overlays/db?ref=kind"
+```
+
+### 7. Access kubeflow services
+
+#### Kubeflow Pipeline UI
 ```bash
 kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8080:80
 ```
@@ -64,8 +72,15 @@ kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8080:80
 kubectl port-forward -n kubeflow svc/ml-pipeline 8888:8888
 ```
 
-### 7. Open the UI
+#### Model Rehistry API
+```bash
+kubectl port-forward -n kubeflow svc/model-registry-service 3000:8080
+```
+
+### 8. Open the UI
+
 Go to:
+
 ```bash
 http://localhost:8080
 ```
